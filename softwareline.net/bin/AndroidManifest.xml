@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.softwareline.net"
+    android:versionCode="1"
+    android:versionName="1.0"
+     >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="19"/>
+    <!-- zoom işlemleri için-->
+<uses-feature
+ android:glEsVersion="0x00020000"
+ android:required="true" />
+<uses-permission android:name="android.permission.INTERNET" />
+ <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+ <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+ <!--
+ isteğe bağlı olarak 
+ -->
+ <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+ <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+ <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+ <uses-permission android:name="com.example.servisseda.permission.MAPS_RECEIVE" />
+ <uses-permission android:name="com.vogella.android.locationapi.maps.permission.MAPS_RECEIVE" />
+ 
+ 
+ <permission
+ android:name="com.example.servisseda.permission.MAPS_RECEIVE"
+ android:protectionLevel="signature" />
+    <application
+        
+        android:allowBackup="true"
+        android:icon="@drawable/okul"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+         >
+         <!-- apikey alma şifre işlerini buraya kayıt ettirdik -->
+          <meta-data
+       
+ android:name="com.google.android.maps.v2.API_KEY"
+ android:value="AIzaSyA8CWDV3WTGEn6Rr23yVA5grDHUVzsdA0Y"
+ />
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="com.example.softwareline.net.MainActivityGiris"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        <activity
+            android:name="com.example.softwareline.net.KayitOl"
+            android:label="Kayıt Ol" >
+        </activity>
+        <activity
+            android:name="com.example.softwareline.net.GirisYap"
+            android:label="Giris" >
+        </activity>
+         <activity
+            android:name="com.example.softwareline.net.AdminPage"
+            android:label="Admin" >
+        </activity>
+         <activity
+            android:name="com.example.softwareline.net.KullaniciPage"
+            android:label="Kullanıcı" >
+        </activity>
+        <activity
+            android:name="com.example.softwareline.net.AdminMesaj"
+            android:label="Tüm Mesajlar" >
+        </activity>
+        <activity
+            android:name="com.example.softwareline.net.AdminMesajTum"
+            android:label="Mesaj" >
+        </activity> 
+        <activity
+            android:name="com.example.softwareline.net.LocationBulma"
+            android:label="Location" >
+        </activity>
+         <activity
+            android:name="com.example.softwareline.net.LocationKullanici"
+            android:label="LocationKullani" >
+        </activity>
+        <activity
+            android:name="com.example.softwareline.net.LocationKoordinant"
+            android:label="Admin Location" >
+        </activity>
+        <activity
+            android:name="com.example.softwareline.net.KullaniciLocation"
+            android:label="Kullanıcı Harita" >
+        </activity>
+         <activity
+            android:name="com.example.softwareline.net.MainActivity"
+            android:label="LocationKullaniciKoordinant" >
+        </activity>
+        <activity
+            android:name="com.example.softwareline.net.MesajKullanici"
+            android:label="Mesaj Gönder" >
+        </activity>
+        <activity
+            android:name="com.example.softwareline.net.LocationBulmaKullanici"
+            android:label="Servis Konumu" >
+        </activity>
+       
+    </application>
+
+
+</manifest>
